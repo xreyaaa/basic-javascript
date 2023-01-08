@@ -86,7 +86,132 @@ heading.style.background = "red"
 heading.style.color = "white";
 heading.style.textAlign ="center"
 
+//condition(if else)
+// let email="shreyashrestha984@gmail.com";
+// let password="9999999999";
+// if(email=== "shreyashrestha984@gmail.com"&& password==="9999999999"){
+//     console.log("login sucess");//true vayo vane if ko print natra else ko print
+// }else{
+//     console.log("invalid credentials");
+// }
+
+//student grade
+// let grade= "A"
+// if(grade==="B"){
+//     console.log("very good marks");
+
+// }else if (grade==="c"){
+//     console.log("good marks");
+// }else if(grade==="D"){
+//     console.log("needs to improve");
+// }else if (grade==="A"){
+//     console.log("excellent");
+// }else{
+//     console.log("invalid marks");
+// }
+
+// let x=10;
+// if(x>15){
+//     console.log("x is greater tan 15");
+// }else if(x>5){
+//     console.log("x is greater than 5 but");
+// }else{
+//     console.log("x is greater than 15");
+// }
+
+// //weather
+// let weather="winter";
+
+// if(weather==="sunny"){
+//     console.log("it is beatufukl day");
+// }else if(weather==="cloudy"){
+//     console.log("it is cludy");
+// }else if(weather==="rainy"){
+//     console.log("rainy xa");
+// }else if(weather==="winter"){
+//     console.log("jado xa");
+// }
+// else{
+//     console.log("invalid weather");
+// }
+
+//  switch case
+// let day="sunday"
+// switch (day) {
+//     case "monday":
+//         console.log("today is sun");
+//         break;
+//         case "tuesday":
+//             console.log("today is tuesdayn");
+//             break;
+//             case "wedday":
+//                 console.log("today is wed");
+//                 break;
+//                 case "thursadday":
+//                     console.log("today is thursaday");
+//                     break;
+//                     case "friday":
+//         console.log("today is fridayun");
+//         break;
+//         case "saturday":
+//         console.log("today is saturdayun");
+//         break;
+//         case "sunday":
+//             console.log("today is sun");
+//             break;
+    
+
+            
+//     default:
+//         console.log("errorery")
+//         break;
+// }
 
 
+//student
 
+let grade="A"
+
+switch (grade) {
+    case "A":
+        console.log("excellent");
+        
+        break;
+        case "B":
+            console.log("vey god");
+            break;
+            case "C":
+                console.log("average");
+                break;
+                case "D":
+                    console/log("fail")
+                    break;
+
+    default:
+        console.log("failedd")
+        break;
+}
+ let month="jul"
+ switch (month) {
+    case "january":
+        case "febuary":
+            case "march":
+                console.log("the month is in q1");
+        
+        break;
+ 
+        case "april":
+            case"may":
+            case"june":
+            console.log("the month is in q2");
+            break;
+            case"july":
+            case"AUG":
+            case"SEP":
+            console.log("the month is in q3");
+            break;
+    default:
+        console.log("there iis no june");
+        break;
+ }
 
