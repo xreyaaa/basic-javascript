@@ -77,7 +77,15 @@ let z="   how is your life    "
 //console.log(z.trim());//space haru hatauxa agadi paxaid ko space lai matra string paxi ko space lai gardaina
 
 //slice
-console.log(str.slice(1,4));//start dekhi end samma katxa index lai output hell0123 4 end lai gandaina
+//console.log(str.slice(0,4));//start dekhi end samma katxa index lai output hell0123 4 end lai gandaina
+
+const heading = document.getElementById("mycss")
+console.log(heading)
+heading.innerText = "We miss chadwick boseman";
+heading.style.background = "red"
+heading.style.color = "white";
+heading.style.textAlign ="center"
+
 
 
 
