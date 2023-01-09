@@ -170,48 +170,127 @@ heading.style.textAlign ="center"
 
 //student
 
-let grade="A"
+// let grade="A"
 
-switch (grade) {
-    case "A":
-        console.log("excellent");
+// switch (grade) {
+//     case "A":
+//         console.log("excellent");
         
-        break;
-        case "B":
-            console.log("vey god");
-            break;
-            case "C":
-                console.log("average");
-                break;
-                case "D":
-                    console/log("fail")
-                    break;
+//         break;
+//         case "B":
+//             console.log("vey god");
+//             break;
+//             case "C":
+//                 console.log("average");
+//                 break;
+//                 case "D":
+//                     console.log("fail")
+//                     break;
 
-    default:
-        console.log("failedd")
-        break;
-}
- let month="jul"
- switch (month) {
-    case "january":
-        case "febuary":
-            case "march":
-                console.log("the month is in q1");
+//     default:
+//         console.log("failedd")
+//         break;
+// }
+//  let month="july"
+//  switch (month) {
+//     case "january":
+//         case "febuary":
+//             case "march":
+//                 console.log("the month is in q1");
         
-        break;
+//         break;
  
-        case "april":
-            case"may":
-            case"june":
-            console.log("the month is in q2");
-            break;
-            case"july":
-            case"AUG":
-            case"SEP":
-            console.log("the month is in q3");
-            break;
-    default:
-        console.log("there iis no june");
-        break;
- }
+//         case "april":
+//             case"may":
+//             case"june":
+//             console.log("the month is in q2");
+//             break;
+//             case"july":
+//             case"AUG":
+//             case"SEP":
+//             console.log("the month is in q3");
+//             break;
+//     default:
+//         console.log("there iis no june");
+//         break;
+//  }
 
+// for(i=0;i<10;i++){//initialize condition interution
+//     console.log(i);
+// }
+// let i=0;//globally variable declare
+//  while(i<5){
+//   console.log(i);
+//     i++;
+//  }
+
+//do while
+
+// let i=0;
+//  do{  //first ma execute hunxa ani matra condition check hunxa
+//      console.log(i);
+// i++;
+
+//  }while(i<5);
+
+//ARRAY
+// const myArr=[1,2,3,4,5,8];
+// console.log(myArr.length);
+// console.log(myArr[4]);
+
+// const newArr=["shyam","geeta","sita","ram"];
+// console.log(newArr);
+// //push methoda last ma thapna paryo vane
+// const newAdd=newArr.push("iron man");
+// console.log(newAdd);
+
+//UNSHIFT METHOD agadi thapne ho 0 index ma
+// const newArr=["shreya","amima","shyam"];
+// console.log(newArr.unshift("captain"));
+// console.log(newArr);
+
+//pop method last ko index lai delete garna paryo vane
+// const newArr=[1,2,3,4,56,5];
+// console.log(newArr);
+// const newData=newArr.pop();
+// console.log(newData);
+
+//shift method agadi ko index lai delet hanne
+
+// const newArr=[1,2,3,4,56,5];
+// console.log(newArr);
+// const newData=newArr.shift();
+// console.log(newData);
+
+//concat method duita array lai jodne
+
+// let arr1=[1,2,3,4,5];
+// let arr2=["shf","hui","njkbkj"];
+// console.log(arr1.concat(arr2));
+
+//filter method  chaine kura ko list nikaldine chaine kura filger garera dine long data bata
+// let newArr=[2,34,5,6,7,8];
+// console.log(newArr);
+// const findFilter=newArr.filter((n)=>n>5)
+// console.log(findFilter);
+// console.log(newArr);
+
+//splice method  ekaixoti bich ko hatauna delete garna lai
+// const newArr=[5,6,7,7,8,8,9,1];
+// console.log(newArr);
+// const newData=newArr.splice(2,3);
+// console.log(newData);
+// console.log(newArr);
+
+//reverse method
+
+// const newArr=[6,5,6,7,1,2,9];
+// console.log(newArr);
+// const newData=newArr.reverse()
+// console.log(newData);
+// console.log(newArr);
+
+//sort method  acsending order banidinxa default mai
+
+const newArr=[6,5,6,7,1,2,9];
+console.log(newArr.sort());
