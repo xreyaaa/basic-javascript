@@ -50,9 +50,9 @@
 // console.log(typeof number .toString());
 
 //string method
-let str ="hello, world!";
-let y=" lol snkn nksn";
-let z="   how is your life    "
+// let str ="hello, world!";
+// let y=" lol snkn nksn";
+// let z="   how is your life    "
 
 // //charAt
 // console.log(str.charAt(0))
@@ -79,12 +79,12 @@ let z="   how is your life    "
 //slice
 //console.log(str.slice(0,4));//start dekhi end samma katxa index lai output hell0123 4 end lai gandaina
 
-const heading = document.getElementById("mycss")
-console.log(heading)
-heading.innerText = "We miss chadwick boseman";
-heading.style.background = "red"
-heading.style.color = "white";
-heading.style.textAlign ="center"
+// const heading = document.getElementById("mycss")
+// console.log(heading)
+// heading.innerText = "We miss chadwick boseman";
+// heading.style.background = "red"
+// heading.style.color = "white";
+// heading.style.textAlign ="center"
 
 //condition(if else)
 // let email="shreyashrestha984@gmail.com";
@@ -292,5 +292,122 @@ heading.style.textAlign ="center"
 
 //sort method  acsending order banidinxa default mai
 
-const newArr=[6,5,6,7,1,2,9];
-console.log(newArr.sort());
+// const newArr=[6,5,6,7,1,2,9];
+// console.log(newArr.sort());
+//object
+// const myprofile=
+// {
+//     firstname:"shrya",
+//     lastname:"rat",
+//     age:88,
+//     ismarrie:false,
+//     issalary: function()//is a ptoperty: dunctiion which is a value in copy
+//     {
+//         console.log("i m umemployeed");
+//         return true;//value return nagari answer audaina funcyion rw method ma
+//     },
+// };
+// console.log(myprofile);
+// console.log(myprofile.age); //myprofile ma vako age proprty lai access gareko
+// console.log(myprofile["age"]);//acces gareko 
+// console.log(myprofile.issalary()); 
+
+// const car={
+//      make:"rover",
+// //     model:"camry",
+// //     color:"red",
+// //     runwheel:3,
+// //     iselectric: false,
+//     startengine: function()
+//    {
+//       console.log("start");
+//          return true;
+
+//   },
+//   endengine :function()
+//    {
+//       console.log("end");
+//        return false;
+//     }
+
+// };
+//      console.log(car);
+//    console.log(car.startengine());
+//      console.log(car.endengine());
+//  if(car.startengine())
+//     {
+//         console.log("car is about to start");
+//     }
+//     else if (car.endengine()){
+//         console.log("car is at stedyr");
+
+//     }
+//     else{
+//         console.log("error");
+//     }
+    
+//     //function
+//     function mydata(){
+//         let a=90;
+//         let b=12;
+//         let result=(a+b)/2;
+//         console.log(result);
+//         return result;
+     
+//     }
+ //  mydata(); //call greko function lai\
+    
+
+ //another ques
+//  function newd(a,b,c){
+//    return(a+b+c)/2;
+// }
+// const ans =newd(2,2,2);
+// const ans1=newd(2,3,4);
+// console.log(ans);
+// console.log(ans1);
+
+// const myvalue= function()
+// {
+//     let x=3;
+//     let y=4;
+//     let result=x*y;
+//     console.log(result);
+//     return result;
+// }
+// console.log(myvalue());
+
+function mydata(arr=[]){
+    let total=0;
+    for(let i=0;i<arr.length;i++)
+    {
+        total=total+arr[i];
+    }
+    return total;
+}
+const ans= mydata([1,2,3,4,5]);
+console.log(ans);
+
+
+//scoping
+let x=67; //global scoping
+
+
+function varr()
+{
+var x=9+9;
+console.log(x);
+}
+console.log(x);
+varr();
+
+function myblock()
+{
+    if(true)
+    {
+        var x=99*9;
+        console.log(x);
+
+    }
+}
+myblock();
