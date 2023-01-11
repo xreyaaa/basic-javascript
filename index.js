@@ -377,37 +377,84 @@
 // }
 // console.log(myvalue());
 
-function mydata(arr=[]){
-    let total=0;
-    for(let i=0;i<arr.length;i++)
-    {
-        total=total+arr[i];
-    }
-    return total;
+// function mydata(arr=[]){
+//     let total=0;
+//     for(let i=0;i<arr.length;i++)
+//     {
+//         total=total+arr[i];
+//     }
+//     return total;
+// }
+// const ans= mydata([1,2,3,4,5]);
+// console.log(ans);
+
+
+// //scoping
+// let x=67; //global scoping
+
+
+// function varr()
+// {
+// var x=9+9;
+// console.log(x);
+// }
+// console.log(x);
+// varr();
+
+// function myblock()
+// {
+//     if(true)
+//     {
+//         var x=99*9;
+//         console.log(x);
+
+//     }
+// }
+// myblock();
+
+//DOM manipulation and its methods
+// const ans=document.head;//head bitra ko sab lai access gareko
+// console.log(ans);
+
+// const ans=document.body.firststElementChild;// body bitra ko first child how lai acces gareko
+// console.log(ans);
+
+//tochange is by are
+
+const result= document.getElementById("myIs");
+result.innerHTML="ronaldo kina esto  <b>mula<b>"; //esma html tag use garna milxa
+result.innerText="ronaldo kina esto"; 
+
+const ans=document.getElementsByClassName("myyour");
+console.log(ans[0]);
+ans[0].innerHTML="bhjbjh<b>ugguyg</b>";
+
+const newData= document.getElementsByTagName("span")
+console.log(newData);
+
+newData[0].innerHTML="<strong>veryhappy</strong>";//text change gareko happy lai very happy
+
+const myEmail=document.getElementsByName("email");//name haru input tag bitra hunxa jastai form ma 
+console.log(myEmail[0]);
+
+myEmail[0].style.width="200px";//css deko
+
+const mybutton= document.getElementById("clickgara");
+ mybutton.innerText="save"; //clickme bata save gareko text change gareko
+
+ mybutton.style.background="blue"; //color chnage gareko
+ mybutton.style.color="white";//white color
+ mybutton.style.padding="10px";
+ mybutton.style.cursor="pointer";// save nirw jada pointer auxa
+ mybutton.style.border="none";// boder hatako
+
+ mybutton.onclick=myFunc;//() halyo vane click garena vane ni afai auxa
+
+ function myFunc(){
+ const create=document.createElement("h2");//h2 vanne element create gardinxa hamro body ma
+ create.innerHTML="thanos was right";
+ document.body.prepend(create);//body ma dekhauna ko lagi method use garne prepend rw apend
+ //append vaneko tala auxa
+
+ 
 }
-const ans= mydata([1,2,3,4,5]);
-console.log(ans);
-
-
-//scoping
-let x=67; //global scoping
-
-
-function varr()
-{
-var x=9+9;
-console.log(x);
-}
-console.log(x);
-varr();
-
-function myblock()
-{
-    if(true)
-    {
-        var x=99*9;
-        console.log(x);
-
-    }
-}
-myblock();
