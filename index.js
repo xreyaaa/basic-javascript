@@ -435,6 +435,8 @@ console.log(newData);
 newData[0].innerHTML="<strong>veryhappy</strong>";//text change gareko happy lai very happy
 
 const myEmail=document.getElementsByName("email");//name haru input tag bitra hunxa jastai form ma 
+const mycountry=document.querySelector("#mycountry");
+mycountry.innerHTML="nepal has<b>huihsn<b> jhj</b>";
 console.log(myEmail[0]);
 
 myEmail[0].style.width="200px";//css deko
@@ -447,14 +449,80 @@ const mybutton= document.getElementById("clickgara");
  mybutton.style.padding="10px";
  mybutton.style.cursor="pointer";// save nirw jada pointer auxa
  mybutton.style.border="none";// boder hatako
+ const myclear=document.querySelectorAll("button");
+ for (let i=0;i<myclear.length;i++){
+    myclear[1].innerText="clear"  //another method button ma text add garne
+ }
+//myclear[1].innerText="clear" arko methods
+myclear[1].style.background="red";
+myclear[1].style.color="#fff";
+myclear[1].style.border="none";
+myclear[1].style.cursor="pointer";
+myclear[1].style.padding="10px";
 
- mybutton.onclick=myFunc;//() halyo vane click garena vane ni afai auxa
+ mybutton.onclick=myFunc;//() halyo vane click garena vane ni afai auxa thanos was right vanne print huna paryo click garda
+
+ myclear[1].onclick=deletgardeu; // reference matra line function ko onclick huda,call nagrne
+
+ function deletgardeu(){
+    const pleasedelet=document.querySelector("h2");//h2 tag lai elct gareko thanos wala
+pleasedelet.remove(); //remove vanne method use gareko
+ }
 
  function myFunc(){
- const create=document.createElement("h2");//h2 vanne element create gardinxa hamro body ma
+ const create=document.createElement("h2");//h2 vanne element create gardinxa hamro body ma span haru pani create garna pauxa
  create.innerHTML="thanos was right";
  document.body.prepend(create);//body ma dekhauna ko lagi method use garne prepend rw apend
  //append vaneko tala auxa
 
  
 }
+const exam=document.querySelectorAll("span");
+console.log(exam);
+exam[1].innerText="haruclass";
+exam[1].style.color="red";
+
+//advance array method
+
+//foreach
+//if we use for each it cannot return array.it only iterate(i++) main array.
+
+//let arr=[2,4,56,7,8,9]
+
+//const result=()=>{}
+// const myforeac=arr.forEach((value,index,array)=> {
+//     console.log(index+"="+value);
+// return (array[index]=value+2)
+// });
+
+//map
+//if we use map method it returns new array after iterate main array;
+// const mymap=arr.map((value,index,array)=>{
+// return array[index]=value+2
+
+// });
+// console.log(mymap);
+
+//filter
+// const myfilter= arr.filter((value,index)=>{
+//     return value>2; //print greater than 2
+//     return value %2===0; //for even
+// });
+// console.log(myfilter);
+
+//find method
+
+// const myfind=arr.find((value,index)=>{
+//     return value>4;
+// });
+
+// console.log(myfind);
+
+//reduce method
+//return single value output(sum,avretage)//accum le
+// const myreduce=arr.reduce((total,curvalue,index)=>{
+//     total= total+curvalue;
+//     return total;
+// });
+// console.log(myreduce);
+
