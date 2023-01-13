@@ -421,66 +421,66 @@
 
 //tochange is by are
 
-const result= document.getElementById("myIs");
-result.innerHTML="ronaldo kina esto  <b>mula<b>"; //esma html tag use garna milxa
-result.innerText="ronaldo kina esto"; 
+// const result= document.getElementById("myIs");
+// result.innerHTML="ronaldo kina esto  <b>mula<b>"; //esma html tag use garna milxa
+// result.innerText="ronaldo kina esto"; 
 
-const ans=document.getElementsByClassName("myyour");
-console.log(ans[0]);
-ans[0].innerHTML="bhjbjh<b>ugguyg</b>";
+// const ans=document.getElementsByClassName("myyour");
+// console.log(ans[0]);
+// ans[0].innerHTML="bhjbjh<b>ugguyg</b>";
 
-const newData= document.getElementsByTagName("span")
-console.log(newData);
+// const newData= document.getElementsByTagName("span")
+// console.log(newData);
 
-newData[0].innerHTML="<strong>veryhappy</strong>";//text change gareko happy lai very happy
+// newData[0].innerHTML="<strong>veryhappy</strong>";//text change gareko happy lai very happy
 
-const myEmail=document.getElementsByName("email");//name haru input tag bitra hunxa jastai form ma 
-const mycountry=document.querySelector("#mycountry");
-mycountry.innerHTML="nepal has<b>huihsn<b> jhj</b>";
-console.log(myEmail[0]);
+// const myEmail=document.getElementsByName("email");//name haru input tag bitra hunxa jastai form ma 
+// const mycountry=document.querySelector("#mycountry");
+// mycountry.innerHTML="nepal has<b>huihsn<b> jhj</b>";
+// console.log(myEmail[0]);
 
-myEmail[0].style.width="200px";//css deko
+// myEmail[0].style.width="200px";//css deko
 
-const mybutton= document.getElementById("clickgara");
- mybutton.innerText="save"; //clickme bata save gareko text change gareko
+// const mybutton= document.getElementById("clickgara");
+//  mybutton.innerText="save"; //clickme bata save gareko text change gareko
 
- mybutton.style.background="blue"; //color chnage gareko
- mybutton.style.color="white";//white color
- mybutton.style.padding="10px";
- mybutton.style.cursor="pointer";// save nirw jada pointer auxa
- mybutton.style.border="none";// boder hatako
- const myclear=document.querySelectorAll("button");
- for (let i=0;i<myclear.length;i++){
-    myclear[1].innerText="clear"  //another method button ma text add garne
- }
-//myclear[1].innerText="clear" arko methods
-myclear[1].style.background="red";
-myclear[1].style.color="#fff";
-myclear[1].style.border="none";
-myclear[1].style.cursor="pointer";
-myclear[1].style.padding="10px";
+//  mybutton.style.background="blue"; //color chnage gareko
+//  mybutton.style.color="white";//white color
+//  mybutton.style.padding="10px";
+//  mybutton.style.cursor="pointer";// save nirw jada pointer auxa
+//  mybutton.style.border="none";// boder hatako
+//  const myclear=document.querySelectorAll("button");
+//  for (let i=0;i<myclear.length;i++){
+//     myclear[1].innerText="clear"  //another method button ma text add garne
+//  }
+// //myclear[1].innerText="clear" arko methods
+// myclear[1].style.background="red";
+// myclear[1].style.color="#fff";
+// myclear[1].style.border="none";
+// myclear[1].style.cursor="pointer";
+// myclear[1].style.padding="10px";
 
- mybutton.onclick=myFunc;//() halyo vane click garena vane ni afai auxa thanos was right vanne print huna paryo click garda
+//  mybutton.onclick=myFunc;//() halyo vane click garena vane ni afai auxa thanos was right vanne print huna paryo click garda
 
- myclear[1].onclick=deletgardeu; // reference matra line function ko onclick huda,call nagrne
+//  myclear[1].onclick=deletgardeu; // reference matra line function ko onclick huda,call nagrne
 
- function deletgardeu(){
-    const pleasedelet=document.querySelector("h2");//h2 tag lai elct gareko thanos wala
-pleasedelet.remove(); //remove vanne method use gareko
- }
+//  function deletgardeu(){
+//     const pleasedelet=document.querySelector("h2");//h2 tag lai elct gareko thanos wala
+// pleasedelet.remove(); //remove vanne method use gareko
+//  }
 
- function myFunc(){
- const create=document.createElement("h2");//h2 vanne element create gardinxa hamro body ma span haru pani create garna pauxa
- create.innerHTML="thanos was right";
- document.body.prepend(create);//body ma dekhauna ko lagi method use garne prepend rw apend
- //append vaneko tala auxa
+//  function myFunc(){
+//  const create=document.createElement("h2");//h2 vanne element create gardinxa hamro body ma span haru pani create garna pauxa
+//  create.innerHTML="thanos was right";
+//  document.body.prepend(create);//body ma dekhauna ko lagi method use garne prepend rw apend
+//  //append vaneko tala auxa
 
  
-}
-const exam=document.querySelectorAll("span");
-console.log(exam);
-exam[1].innerText="haruclass";
-exam[1].style.color="red";
+// }
+// const exam=document.querySelectorAll("span");
+// console.log(exam);
+// exam[1].innerText="haruclass";
+// exam[1].style.color="red";
 
 //advance array method
 
@@ -526,3 +526,46 @@ exam[1].style.color="red";
 // });
 // console.log(myreduce);
 
+//add event listeners
+
+const newClick=document.getElementById("newclick");
+const newbox=document.getElementById("mybox");
+const newtag=document.getElementById("mytag");
+const myinput=document.querySelector("input");
+
+newClick.addEventListener("click",()=>{
+    newbox.classList.add("newCssDiv");
+    // newbox.style.background="purple";
+    // newbox.style.color="#fff";
+    // newbox.style.margin="20px";
+});
+newbox.addEventListener("mouseover",()=>{//button alikati hallinxa mouse box bitra janxa vaneko
+    newClick.style.transform="scale(1.1)";
+    newtag.style.background="yellow";
+});
+newbox.addEventListener("mouseout",()=>{//mouse baira gayepaxi color janxa
+    newClick.style.transform="";
+    newtag.style.background="";
+});
+
+myinput.addEventListener("change",(e)=>{//form ma input change garna kam lagxa
+    console.log(e.target.value);
+});
+
+newbox.addEventListener("dblclick",()=>{//doubleclick garyo vane black auca
+
+    document.body.style.background="black";
+});
+
+newbox.addEventListener("click",()=>{//feri ekxoti click garda backto normal hune
+    document.body.style.background="#fff";
+});
+
+newClick.addEventListener("contextmenu",(e)=>{//right click garda color change hune
+    e.preventDefault();//form ko data nahatne submit bavaye samma 
+    newClick.style.background="pink";
+});
+
+addEventListener("contextmenu",(e)=>{//context menu vaneko right click garne ho ani prevent le right click garda kei nadekhaune ho
+    e.preventDefault();
+})
