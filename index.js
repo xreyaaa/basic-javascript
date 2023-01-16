@@ -528,44 +528,143 @@
 
 //add event listeners
 
-const newClick=document.getElementById("newclick");
-const newbox=document.getElementById("mybox");
-const newtag=document.getElementById("mytag");
-const myinput=document.querySelector("input");
+// const newClick=document.getElementById("newclick");
+// const newbox=document.getElementById("mybox");
+// const newtag=document.getElementById("mytag");
+// const myinput=document.querySelector("input");
 
-newClick.addEventListener("click",()=>{
-    newbox.classList.add("newCssDiv");
-    // newbox.style.background="purple";
-    // newbox.style.color="#fff";
-    // newbox.style.margin="20px";
-});
-newbox.addEventListener("mouseover",()=>{//button alikati hallinxa mouse box bitra janxa vaneko
-    newClick.style.transform="scale(1.1)";
-    newtag.style.background="yellow";
-});
-newbox.addEventListener("mouseout",()=>{//mouse baira gayepaxi color janxa
-    newClick.style.transform="";
-    newtag.style.background="";
-});
+// newClick.addEventListener("click",()=>{
+//     newbox.classList.add("newCssDiv");
+//     // newbox.style.background="purple";
+//     // newbox.style.color="#fff";
+//     // newbox.style.margin="20px";
+// });
+// newbox.addEventListener("mouseover",()=>{//button alikati hallinxa mouse box bitra janxa vaneko
+//     newClick.style.transform="scale(1.1)";
+//     newtag.style.background="yellow";
+// });
+// newbox.addEventListener("mouseout",()=>{//mouse baira gayepaxi color janxa
+//     newClick.style.transform="";
+//     newtag.style.background="";
+// });
 
-myinput.addEventListener("change",(e)=>{//form ma input change garna kam lagxa
-    console.log(e.target.value);
-});
+// myinput.addEventListener("change",(e)=>{//form ma input change garna kam lagxa
+//     console.log(e.target.value);
+// });
 
-newbox.addEventListener("dblclick",()=>{//doubleclick garyo vane black auca
+// newbox.addEventListener("dblclick",()=>{//doubleclick garyo vane black auca
 
-    document.body.style.background="black";
-});
+//     document.body.style.background="black";
+// });
 
-newbox.addEventListener("click",()=>{//feri ekxoti click garda backto normal hune
-    document.body.style.background="#fff";
-});
+// newbox.addEventListener("click",()=>{//feri ekxoti click garda backto normal hune
+//     document.body.style.background="#fff";
+// });
 
-newClick.addEventListener("contextmenu",(e)=>{//right click garda color change hune
-    e.preventDefault();//form ko data nahatne submit bavaye samma 
-    newClick.style.background="pink";
-});
+// newClick.addEventListener("contextmenu",(e)=>{//right click garda color change hune
+//     e.preventDefault();//form ko data nahatne submit bavaye samma 
+//     newClick.style.background="pink";
+// });
 
-addEventListener("contextmenu",(e)=>{//context menu vaneko right click garne ho ani prevent le right click garda kei nadekhaune ho
-    e.preventDefault();
-})
+// addEventListener("contextmenu",(e)=>{//context menu vaneko right click garne ho ani prevent le right click garda kei nadekhaune ho
+//     e.preventDefault();
+// })
+
+// const MyClickbtn=document.getElementById("newclick");
+// const heyinput=document.getElementById("myinput");
+// const myclear=document.getElementById("myclear");
+
+
+// const callmeback=()=>{
+// //alert(heyinput.value);
+// //sessionStorage.setItem("key", heyinput.value);
+// localStorage.setItem("shreya",JSON.stringify({fname:"ram",lname:"thapa",age:23}) );//string bata object ,a lageko
+// };
+// const DeleteToken=()=>{
+//     localStorage.clear();
+// };
+// MyClickbtn.addEventListener("click",callmeback);
+// myclear.addEventListener("click",DeleteToken);
+
+
+
+// if(localStorage.getItem("shreya")){
+
+//     //alert(localStorage.getItem("shreya"));
+//     console.log(JSON.parse(localStorage.getItem("shreya")));//object bata string ma lageko
+// }else{
+//     alert("xaina");
+// }
+
+//math OBJECT 
+
+//const value= Math.random();//random value dnxa otp aune esle ho
+//console.log(value);
+
+
+//abs
+// const value=Math.abs(-5)//value neg diyeni positibve diyeni valur poditive ma falxa
+// console.log(value);
+
+// function subtract(a,b){
+//     return Math.abs(a-b);//-ve vayeni answr positive ma ayo
+// }
+// console.log(subtract(2,6));
+
+//trunk
+
+// const value=Math.trunc(5.8);//decimla ma paxadi ko value didaina .paxadi ko
+// console.log(value);
+
+// const value=Math.round(4.5);
+// console.log(value);
+
+// const value=Math.floor(4.5);//4 linxa tala ko value llinxa 4 round up garda
+// console.log(value);
+
+// const value=Math.max(44,33,66,66,77,89);
+// console.log(value);
+
+//const value=Math.min(43,22,67,89);//minimum value nikalxa
+//console.log(value);
+
+// const value=Math.ceil(5.7);//floor ko ulto ceil le thulo dinxa floor le jati garen sano dinxa
+// console.log(value);
+
+// const value=Math.pow(2,4);//2 base 4 power 2power 4 
+// console.log(value);
+
+// const value=Math.sqrt(625);
+// console.log(value);
+
+//date in javascipt
+
+// const myDate=new Date();
+// console.log(myDate);
+
+// const oneByOne=new Date();
+// console.log(oneByOne.getTime());
+
+// const oneByOne=new Date();
+//  console.log(oneByOne.getDay());//momday vayo vane 1 auxa sun 0 bata suru
+
+// const oneByOne=new Date();
+//  console.log(oneByOne.getFullYear());//yo barsa print hunxa
+
+// const oneByOne=new Date();
+//  console.log(oneByOne.toISOString());//mongo db ma esari save hunxa
+
+//settimeout
+
+// setTimeout(()=>{
+//     console.log("sabai jana ko atma")
+// },6000)//6 sec paxi chala vaneko function ki method lai
+
+const setId=setInterval(()=>{
+    console.log("heloo sello mell")
+},2000);//feri airahanxa harek 3 sec ma
+setTimeout(()=>{
+    clearInterval(setId);//first ma execute hunxa ani paxi clear hunxa
+    console.log("lala");
+},3000);
+
