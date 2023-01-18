@@ -660,11 +660,11 @@
 //     console.log("sabai jana ko atma")
 // },6000)//6 sec paxi chala vaneko function ki method lai
 
-const setId=setInterval(()=>{
-    console.log("heloo sello mell")
-},2000);//feri airahanxa harek 3 sec ma
-setTimeout(()=>{
-    clearInterval(setId);//first ma execute hunxa ani paxi clear hunxa
-    console.log("lala");
-},3000);
+// const setId=setInterval(()=>{
+//     console.log("heloo sello mell")
+// },2000);//feri airahanxa harek 3 sec ma
+// setTimeout(()=>{
+//     clearInterval(setId);//first ma execute hunxa ani paxi clear hunxa
+//     console.log("lala");
+// },3000);
 
