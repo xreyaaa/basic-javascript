@@ -668,3 +668,368 @@
 //     console.log("lala");
 // },3000);
 
+//OOP concept 
+//constructor function  
+
+
+//bank form 
+
+
+
+//dom manipulation
+
+// //creating
+// const Form1=document.getElementById("form1");
+// const customerName=document.getElementById("customerName");
+// const AddAmount =document.getElementById("addamount");
+
+// //for deposite
+// const Form2= document.getElementById("form2");
+// const DepoAccountNumber=document.getElementById("depoaccountNumber");
+// const DepoAmount=document.getElementById("depoamount");
+
+// //for withdraw
+// const Form3= document.getElementById("form3");
+// const CheckAccountNumber=document.getElementById("checkaccountNumber");
+// const WithDrawAmount=document.getElementById("withdrawamount");
+
+
+// let accounts=[];
+// Form1.addEventListener("submit",(e)=>{
+//     e.preventDefault();//reload nahuna lai rw data bacahaina lai
+//    const account= new BankAccount(customerName.value,+AddAmount.value)
+//    accounts.push(account);
+//    console.log(accounts);
+// });
+
+// //for deposit
+// Form2.addEventListener("submit",(e)=>{
+//     e.preventDefault()
+//     const  DepoValue=accounts.find(
+//         (value,index)=>value.accountNumber===+DepoAccountNumber.value);
+// DepoValue.deposit(+DepoAmount.value);
+// console.log(accounts);
+// })
+// //for withdraw
+// Form3.addEventListener("submit",(e)=>{
+//     e.preventDefault()
+//     const WithdrawValue=accounts.find(
+//         (value,index)=>value.accountNumber===+CheckAccountNumber.value);
+//         WithdrawValue.withdraw(+WithDrawAmount.value);
+// console.log(accounts);
+// })
+
+
+// function BankAccount(customerName,balance=0){
+//     this.customerName=customerName
+//     this.accountNumber=Date.now()
+//     this.balance=balance;
+
+//     this.deposit=function(amount){
+//         this.balance=this.balance+amount;
+//     }
+// this.withdraw= function(amount){
+//     this.balance=this.balance-amount;
+// }
+// }
+// const anilAccount=new BankAccount("anil shah",5000)//constructor function li object banauna new use garne
+// const ramAccount=new BankAccount("ram")
+// console.log(anilAccount,ramAccount);
+
+//inheritance
+
+// function BankAccount(customerName,balance=0){
+//     this.CustomerName=customerName;
+//     this.accountNumber= Date.now();
+//     this.balance=balance;
+
+// //     this.deposit=function(amount){
+// //          this.balance+=amount;
+// //    };
+
+// //     this.withdraw=function(amount){
+// //     this.balance-=amount;
+// //    }
+// }
+ //console.log(BankAccount);
+
+
+
+
+
+
+
+
+//  BankAccount.prototype.deposit=function(amount){
+//     this.balance+=amount;
+// };
+// BankAccount.prototype.withdraw=function(amount){
+//     this.balance-=amount;
+// };
+// function CurrentAccount(customerName,balance=0){
+//     BankAccount.call(this,customerName,balance);
+//     this.transactionLimit=50000;
+// }
+// function SavingAccount(customerName,balance=0){
+//     BankAccount.call(this,customerName,balance);
+//     this.transactionLimit=20000;
+// }
+
+// CurrentAccount.prototype.takeBusinessLOan=function(amount){
+//     console.log("yaking business loan: ${amount}");
+// };
+// CurrentAccount.prototype=Object.create(CurrentAccount.prototype);
+//  //const hariAccount=new BankAccount("hari",5000);
+// const hariAccount=new CurrentAccount("hari",50000);
+
+//  console.log(hariAccount);
+//  hariAccount=new 
+
+
+// function Person(name,age=0){
+//     this.name=name;//this is used for making onject in oop
+//     this.age=age;
+//     this.sayhello=function(){
+//         console.log(`hello my name is ${this.name} and i am ${this.age} years old`);
+//     };
+// };
+// const shreay=new Person("shreya",9);
+// shreay.sayhello();
+// console.log(shreay);
+
+//function BASED OOP
+// function BankAccount(CustomerName,balance=0){//bankacc constryctor ho
+//     this.CustomerName=CustomerName//this le parameter ko value lai assign 
+//     this.accountNumber=Date.now()
+//     this.balance=balance;
+//     // this.deposit=function(amount){
+//     //     this.balance+=amount;
+//     // };
+//     // this.withdraw=function(amount){
+//     //     this.balance-=amount;
+//     // };
+// }
+// BankAccount.prototype.deposit=function(amount){//metgod prototype ma gayera store vayo memory save garnalai
+//     this.balance+=amount;
+// }
+// BankAccount.prototype.withdraw=function(amount){
+//     this.balance-=amount;
+// };
+
+
+
+// //child class (inheritence)
+
+// function CurrentAccount(CustomerName,balance=0){
+//    BankAccount.call(this,CustomerName,balance);//parent ko proprty access gareko with help of call method also called constructor calling
+//    this.transactionLimit=9000//naya property add garnalai
+// }
+// //parent ko method lai acces gareko
+// CurrentAccount.prototype=Object.create(BankAccount.prototype);//bankacc bata current ma inherittae obj banayera
+// CurrentAccount.prototype.taleBusinessLoan=function(amount){
+//     console.log(`taking bisness loan:is ${amount}`)
+// }
+// //const ramAccount=new BankAccount ("ram",7000);
+// const ramAccount=new CurrentAccount ("ram",7000);
+// ramAccount.taleBusinessLoan(800);
+// //to acces method create object
+// console.log(ramAccount);
+
+
+//CLASS BASED OOP AND INHERITANCE
+
+
+// class BankAccount{
+// CustomerName;
+// accountNUmber;
+// #balance;
+
+// constructor(CustomerName,balance=0){
+//     this.CustomerName=CustomerName;
+//     this.accountNUmber=Date.now();
+//     this.#balance=balance;
+
+// }
+// deposit(amount){
+//     this.#balance+=amount;
+//     console.log(`deposited ${amount}, current balance is:${this.#balance}`)
+// }
+// withdrwa(amount){
+//     if(this.#balance>=amount){
+
+    
+//     this.#balance-=amount;
+//     console.log(`withdrwa ${amount},curentb balace is :${this.#balance}`)
+// }else{
+//     this.console.log(`insufficient fund u habe onlu ${this.#balance}`);
+// }
+// }
+// //settr
+// set balance(amount){
+// this.#balance=amount;//to modify
+// }
+// //getter
+// get balance(){
+// return this.#balance
+// }
+// }
+// //child class
+
+// class CurrentAccount extends BankAccount{
+//     constructor(CustomerName,balance=0){
+//         super(CustomerName,balance);//super le call gareko ho
+//         this.tarnsactionLimit=5000;//naya feature add garne
+//     }
+//     #calculateInterest(amount){
+//        const interest=amount*0.1;//10%
+//        console.log(`interest amount is :${interest}`);
+//     }
+//     takeBusinessLoan(amount){
+//         this.#calculateInterest(amount)
+//         console.log(`taking business loan is:${amount}`)
+//     }
+// }
+// const ramAccount=new CurrentAccount("ram",6000);
+// ramAccount.takeBusinessLoan(90000);//balance set
+// // ramAccount.deposit(1500);
+// // ramAccount.withdrwa(200);
+// // ramAccount.takeBusinessLoan(800);
+// console.log(ramAccount);//balance get
+
+//static peopert and  meTHOS
+
+// class Calculator{
+//     static add(a,b){
+//         return a+b;
+//     }
+
+// static subtract(a,b){
+//     return Math.abs(a-b);
+// }
+// }
+
+// //let addition =Calculator.add(5,8);
+// let subtraction =Calculator.subtract(5,8);
+// console.log(subtraction);
+
+// // let ans= Math.random()
+// // console.log(ans);
+
+// class User{
+//     static id =1;
+//     constructor(name,age,income){
+//         this.name=name;
+//         this.age=age;
+//         this.income=income;
+//         this.id=User.id++;
+
+//     }
+//     static sortByIncome(a,b){
+//         return a.income-b.income;
+//     }
+//     static sortByAge(a,b){
+//         return a.age - b.age
+//     }
+// }
+// const user1=new User("ram",23,90);
+
+// const user2=new User("shyam",13,80);
+// const user3=new User("rami",22,70);
+// const users=[user1,user2,user3];
+// //users.sort(User.sortByIncome);
+// //users.sort(User.sortByAge);
+// console.log(users);
+
+
+
+// function myName(name="ram"){
+//     setTimeout(()=>{
+//         for(let i=0; i<100;i++){
+//             console.log(`{$name}`: ${i});
+//         }
+//     },4000;
+    
+  
+// }
+// myName();
+// alert("hello jij");
+// console.log("lastline");
+
+// setTimeout(()=>{
+//     console.log("hekko");
+// },5000);
+// alert("hey you");
+//CALLBACKCO CONCEPT
+
+// function calculation(a,b,callback){//function ma nai function parameter liyo vane ca;llback functio hunxa
+// let result=a+b;
+// callback(result)
+
+// }
+// calculation(6,9,(sum)=>console.log(`the sum is :${sum}`));
+
+
+//DRY KO CONCEPT calback ko concept
+// let arr=[2,3,4,5,6,7,8];
+// function calculation(arr=[],callback){
+//     let newArr=[];
+//     for (i=0;i<arr.length;i++){//newarr ma arr ko saman push gareko
+//         const element=callback(arr[i]);
+//         newArr.push(element);
+//     }
+//     console.log(newArr);
+// }
+// function add(a){//callback gareko
+//     return a+5;
+// }
+// function subtract(a){
+//     return a-5;
+// }
+// calculation(arr,(a)=>a+5);
+// calculation(arr,(b)=>b-5);
+
+//PROMOSES CONCEPT
+
+//const a=new Promise((resolve,reject)=>{
+//resolve("promise fulfilled")//promise fulfill vayepaxi kei error naune raixa
+//reject ("technical error");
+//});
+
+// a.then((msg)=>console.log(msg))
+// .catch((error)=> console.log(error))
+// .finally(()=>console.log ("work either"));
+
+// let arr=[]
+//  function fetchData(arr=[]){
+//     return new Promise((resolve,reject)=>{
+// arr.push({name:"ram",age:"23"})
+// if(arr.length>0{
+//     resolve("promise fulsiled");
+
+// }else{
+//     reject ("som eisse")
+// }
+// })
+//     }
+
+
+
+ 
+//  fetchData(arr)
+//  .then((msg)=> console.log(msg))
+//  .catch((error)=> console.log(rooe))
+//  .finally(()=> console.log(all done))
+
+//FETCHAPI
+
+const h1=document.querySelector("h1")
+const url="https://catfact.ninja/fact"
+function fetchData(){
+    fetch(url)
+    .then ((res)=>{
+        return res.json()
+        })
+    .then((data)=>(h1.innerText=data.fact))
+    .catch((error)=>console.log(error));
+}
+fetchData();
